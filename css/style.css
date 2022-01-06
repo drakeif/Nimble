@@ -1,0 +1,361 @@
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-300.woff2") format("woff2"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-300.woff") format("woff"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-300.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-regular.woff2") format("woff2"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-regular.woff") format("woff"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-700.woff2") format("woff2"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-700.woff") format("woff"), url("../fonts/montserratAlternates/montserrat-alternates-v12-latin-700.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""), url("../fonts/montserrat/montserrat-v18-latin-300.woff2") format("woff2"), url("../fonts/montserrat/montserrat-v18-latin-300.woff") format("woff"), url("../fonts/montserrat/montserrat-v18-latin-300.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/montserrat/montserrat-v18-latin-regular.woff2") format("woff2"), url("../fonts/montserrat/montserrat-v18-latin-regular.woff") format("woff"), url("../fonts/montserrat/montserrat-v18-latin-regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""), url("../fonts/montserrat/montserrat-v18-latin-600.woff2") format("woff2"), url("../fonts/montserrat/montserrat-v18-latin-600.woff") format("woff"), url("../fonts/montserrat/montserrat-v18-latin-600.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("../fonts/montserrat/montserrat-v18-latin-700.woff2") format("woff2"), url("../fonts/montserrat/montserrat-v18-latin-700.woff") format("woff"), url("../fonts/montserrat/montserrat-v18-latin-700.ttf") format("truetype"); }
+html {
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+body {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: 'Montserrat'; }
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+.container {
+  max-width: 140rem;
+  min-width: 32rem;
+  margin: 0 auto;
+  padding: 0 1.5rem; }
+
+.header {
+  padding: 5rem 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+  @media only screen and (max-width: 786px) {
+    .header {
+      padding: 3rem 0 0 0; } }
+  @media only screen and (max-width: 600px) {
+    .header {
+      padding: 2rem 0 0 0; } }
+  .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff; }
+    @media only screen and (max-width: 600px) {
+      .header__logo {
+        -webkit-column-gap: 1.5rem;
+                column-gap: 1.5rem; } }
+    .header__logo_pic {
+      -webkit-filter: drop-shadow(-10px 10px 20px #B4F299);
+              filter: drop-shadow(-10px 10px 20px #B4F299); }
+      @media only screen and (max-width: 600px) {
+        .header__logo_pic {
+          width: 4rem; } }
+    .header__logo_name {
+      font-family: 'Montserrat Alternates';
+      font-size: 2rem;
+      font-weight: 700; }
+      @media only screen and (max-width: 600px) {
+        .header__logo_name {
+          font-size: 1.6rem; } }
+    @media only screen and (max-width: 930px) {
+      .header__logo {
+        margin-right: auto; } }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 5rem;
+            column-gap: 5rem; }
+    @media only screen and (max-width: 1100px) {
+      .header__nav {
+        -webkit-column-gap: 3rem;
+                column-gap: 3rem; } }
+    .header__nav_links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-column-gap: 5rem;
+              column-gap: 5rem; }
+      @media only screen and (max-width: 1100px) {
+        .header__nav_links {
+          -webkit-column-gap: 3rem;
+                  column-gap: 3rem; } }
+      @media only screen and (max-width: 930px) {
+        .header__nav_links {
+          display: none;
+          position: relative; } }
+    .header__nav_link, .header__dropBtn, .header__dropLink {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: none;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .header__nav_link:hover, .header__dropBtn:hover, .header__dropLink:hover {
+        color: #B4F299; }
+      .header__nav_link.forMobile, .forMobile.header__dropBtn, .forMobile.header__dropLink {
+        display: none; }
+        @media only screen and (max-width: 930px) {
+          .header__nav_link.forMobile, .forMobile.header__dropBtn, .forMobile.header__dropLink {
+            display: block; } }
+    .header__nav_registration {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-column-gap: 1.5rem;
+              column-gap: 1.5rem; }
+      @media only screen and (max-width: 600px) {
+        .header__nav_registration {
+          display: none; } }
+    .header__nav_signUp {
+      padding: 1rem 3rem;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      border: 0.1rem solid #B4F299;
+      border-radius: .8rem;
+      color: #ffffff;
+      font-family: 'Montserrat';
+      font-size: 1.4rem;
+      font-weight: 600;
+      background: #B4F299;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .header__nav_signUp:hover {
+        background: #E99A3D;
+        border: 0.1rem solid #E99A3D; }
+    .header__nav_signIn {
+      padding: 1rem 3rem;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      border: 0.1rem solid #B4F299;
+      border-radius: .8rem;
+      color: #ffffff;
+      font-family: 'Montserrat';
+      font-size: 1.4rem;
+      font-weight: 600;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .header__nav_signIn:hover {
+        background: #4579F5;
+        border: 0.1rem solid #4579F5; }
+    @media only screen and (max-width: 930px) {
+      .header__nav.active .header__nav_links {
+        position: absolute;
+        top: 125%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: rgba(180, 242, 153, 0.2);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: .5rem;
+        border-top: 0.1rem solid #B4F299;
+        border-bottom: 0.1rem solid #B4F299;
+        -webkit-animation: menu-left .5s ease-out;
+                animation: menu-left .5s ease-out; }
+      @-webkit-keyframes menu-left {
+        from {
+          -webkit-transform: translateX(-100%);
+                  transform: translateX(-100%); }
+        to {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0); } }
+      @keyframes menu-left {
+        from {
+          -webkit-transform: translateX(-100%);
+                  transform: translateX(-100%); }
+        to {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0); } } }
+    @media only screen and (max-width: 500px) {
+      .header__nav.active .header__nav_links {
+        font-size: 1.4rem; } }
+  .header__dropMenu {
+    position: relative; }
+    @media only screen and (max-width: 930px) {
+      .header__dropMenu {
+        display: none; } }
+    .header__dropMenu:hover .header__dropContent {
+      display: block; }
+    .header__dropMenu:hover .header__dropBtn {
+      color: #B4F299; }
+      .header__dropMenu:hover .header__dropBtn::after {
+        padding: .2rem;
+        border-width: 0 .2rem .2rem 0 !important;
+        border: solid #B4F299;
+        -webkit-transform: rotate(225deg);
+                transform: rotate(225deg); }
+  .header__dropBtn {
+    position: relative;
+    font-family: 'Montserrat';
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 1rem 0; }
+    .header__dropBtn::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 40%;
+      right: -2rem;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      padding: .2rem;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      @media only screen and (max-width: 1100px) {
+        .header__dropBtn::after {
+          right: -1.5rem; } }
+    .header__dropBtn:hover {
+      color: #B4F299; }
+      .header__dropBtn:hover:after {
+        -webkit-transform: rotate(225deg);
+                transform: rotate(225deg);
+        border: solid #B4F299;
+        border-width: 0 2px 2px 0; }
+  .header__dropContent {
+    display: none;
+    padding: 1rem 2rem;
+    background: #E99A3D;
+    position: absolute;
+    top: 100%;
+    left: 0; }
+  .header__dropLink {
+    line-height: 1.5; }
+  .header__burgerMenu {
+    display: none;
+    margin-left: 3rem;
+    font-family: 'Montserrat';
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    cursor: pointer;
+    color: #B4F299;
+    position: relative;
+    width: 3rem;
+    height: 2rem; }
+    .header__burgerMenu span {
+      display: block;
+      pointer-events: none;
+      background: #B4F299;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      left: 0;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .header__burgerMenu span:nth-child(1) {
+        top: 0; }
+      .header__burgerMenu span:nth-child(2) {
+        top: 50%;
+        width: 75%;
+        opacity: 1; }
+      .header__burgerMenu span:nth-child(3) {
+        top: 100%;
+        width: 50%; }
+    @media only screen and (max-width: 930px) {
+      .header__burgerMenu {
+        display: block; } }
+    @media only screen and (max-width: 600px) {
+      .header__burgerMenu {
+        margin-left: 0; } }
+    .header__burgerMenu.active span:nth-child(1) {
+      top: 50%;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .header__burgerMenu.active span:nth-child(2) {
+      top: 50%;
+      width: 75%;
+      left: -2rem;
+      opacity: 0; }
+    .header__burgerMenu.active span:nth-child(3) {
+      top: 50%;
+      width: 100%;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+
+.intro {
+  background: #05030E;
+  height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */

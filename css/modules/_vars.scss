@@ -1,0 +1,36 @@
+$mainCol: #05030E;
+$accentCol: #B4F299;
+$orange: #E99A3D;
+$blue: #4579F5;
+$wh: #ffffff;
+
+$tr: .2s linear;
+
+@mixin media ($w) {
+        @media only screen and (max-width: #{$w + 'px'}) {
+                @content;
+        }
+}
+
+@mixin button {
+        padding: 1rem 3rem;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        border: .1rem solid $accentCol;
+        border-radius: .8rem;
+        color: $wh;
+        font-family: 'Montserrat';
+        font-size: 1.4rem;
+        font-weight: 600;
+};
+
+@mixin buttonReset {
+        font-family: 'Montserrat';
+        background: none;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        cursor: pointer;
+};
