@@ -1,4 +1,116 @@
 .intro {
-    background: $mainCol;
+    position: relative;
+    background-color: $mainCol;
+    background-image: url('../../images/hand.jpg');
+    @include bg;
     height: 100vh;
+    &::before {
+        @include decorGreenCircle;
+        box-shadow: 20rem 10rem 15rem 5rem $accentDecor;
+        @include media(500) {
+            box-shadow: 10rem 10rem 15rem 5rem $accentDecor;
+        }  
+    }
+    &::after {
+        @include decorGreenCircle;
+        box-shadow: 10rem 40rem 15rem 5rem $accentDecor;
+        @include media(500) {
+            box-shadow: 0rem 30rem 15rem 5rem $accentDecor;
+        }
+    }
+    &__scrollDown {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll-down 1s linear alternate infinite;
+        @keyframes scroll-down {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(20%);
+            }
+        }
+        @include media(500) {
+            bottom: 5%;
+        }
+    }
+    &__inner {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        @include media(500) {
+            align-items: flex-end;
+            padding-bottom: 10rem;
+        }
+    }
+    &__about {
+        max-width: 55rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 3rem;
+        @include media(768) {
+            row-gap: 2rem;
+            max-width: 45rem;
+        }
+        @include media(500) {
+            row-gap: 1rem;
+            max-width: 32rem;
+        }
+        p {
+            font-size: 1.8rem;
+            color: $gray;
+            @include media(500) {
+                font-size: 1.4rem
+            }
+        }
+        button {
+            @include button;
+            padding: 1.5rem 3rem;
+            font-size: 1.6rem;
+            transition: $tr;
+            @include media(500) {
+                font-size: 1.4rem;
+                padding: 1rem 3rem;
+            }
+            &:hover {
+                background: rgba($accentCol, .3);
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2%;
+        @include media(1500) {
+            left: 95%;
+        }
+        @include media(768) {
+            row-gap: 7rem;
+            left: 90%;
+        }
+        @include media(500) {
+            row-gap: 3rem;
+        }
+        a {
+            text-decoration: none;
+            color: $gray;
+            font-size: 1.4rem;
+            transform: rotate(-180deg);
+            writing-mode: vertical-rl;
+            transition: $tr;
+            @include media(500) {
+                font-size: 1.2rem;
+            }
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
 }

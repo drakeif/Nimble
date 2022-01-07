@@ -3,6 +3,8 @@ $accentCol: #B4F299;
 $orange: #E99A3D;
 $blue: #4579F5;
 $wh: #ffffff;
+$gray: #8FA2A6;
+$accentDecor: rgba($accentCol, .1);
 
 $tr: .2s linear;
 
@@ -34,3 +36,30 @@ $tr: .2s linear;
         font-size: inherit;
         cursor: pointer;
 };
+
+@mixin bg {
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+};
+
+@mixin decorGreenCircle {
+        display: block;
+        content: '';
+        background: $accentDecor;
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        top: -7%;
+        left: -7%;
+        border-radius: 50%;
+        filter: blur(3rem);
+        @include media(768) {
+                top: -15%;
+                left: -15%;
+        }
+        @include media(500) {
+                top: -20%;
+                left: -20%;
+        }
+}
