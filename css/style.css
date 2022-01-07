@@ -376,7 +376,7 @@ h1 {
 .intro {
   position: relative;
   background-color: #05030E;
-  background-image: url("../../images/hand.jpg");
+  background-image: url("../images/hand.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
