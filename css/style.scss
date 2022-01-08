@@ -11,6 +11,7 @@ html {
     margin: 0;
 }
 body {
+    background-color: $mainCol;
     color: $wh;
     font-size: 1.6rem;
     font-family: 'Montserrat';
@@ -41,5 +42,11 @@ h1 {
         font-size: 2.8rem
     }
 }
+h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 @import './modules/header';
 @import './modules/intro';
+@import './modules/cards';

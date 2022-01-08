@@ -7,13 +7,13 @@ $gray: #8FA2A6;
 $accentDecor: rgba($accentCol, .1);
 
 $tr: .2s linear;
-
+// MEDIA
 @mixin media ($w) {
         @media only screen and (max-width: #{$w + 'px'}) {
                 @content;
         }
 }
-
+// BUTTON
 @mixin button {
         padding: 1rem 3rem;
         border: none;
@@ -27,7 +27,7 @@ $tr: .2s linear;
         font-size: 1.4rem;
         font-weight: 600;
 };
-
+// BUTTON RESET
 @mixin buttonReset {
         font-family: 'Montserrat';
         background: none;
@@ -36,13 +36,13 @@ $tr: .2s linear;
         font-size: inherit;
         cursor: pointer;
 };
-
+// BACKGROUND STYLE
 @mixin bg {
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
 };
-
+// DECOR CIRCLE
 @mixin decorGreenCircle {
         display: block;
         content: '';
