@@ -571,10 +571,10 @@ h3 {
   padding: 10rem 0; }
   @media only screen and (max-width: 768px) {
     .cards {
-      padding: 7rem 0; } }
+      padding: 5rem 0; } }
   @media only screen and (max-width: 660px) {
     .cards {
-      padding: 5rem 0; } }
+      padding: 3rem 0; } }
   .cards__items {
     display: grid;
     grid-template-columns: repeat(4, auto); }

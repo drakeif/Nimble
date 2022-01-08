@@ -1,10 +1,10 @@
 .cards {
     padding: 10rem 0;
     @include media(768) {
-        padding: 7rem 0;
+        padding: 5rem 0;
     }
     @include media(660) {
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
     &__items {
         display: grid;
