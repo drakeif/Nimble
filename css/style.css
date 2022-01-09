@@ -40,6 +40,18 @@
   font-weight: 700;
   font-display: swap;
   src: local(""), url("../fonts/montserrat/montserrat-v18-latin-700.woff2") format("woff2"), url("../fonts/montserrat/montserrat-v18-latin-700.woff") format("woff"), url("../fonts/montserrat/montserrat-v18-latin-700.ttf") format("truetype"); }
+*::-webkit-scrollbar {
+  width: 7px; }
+
+*::-webkit-scrollbar-track {
+  background: #ffffff; }
+
+*::-webkit-scrollbar-thumb {
+  background: #B4F299; }
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #E99A3D; }
+
 html {
   font-size: 10px;
   -webkit-box-sizing: border-box;
@@ -577,23 +589,26 @@ h3 {
       padding: 3rem 0; } }
   .cards__items {
     display: grid;
-    grid-template-columns: repeat(4, auto); }
+    grid-template-columns: repeat(4, 29rem);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     @media only screen and (max-width: 1220px) {
       .cards__items {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        gap: 10rem; } }
+        gap: 5rem; } }
     @media only screen and (max-width: 768px) {
       .cards__items {
-        gap: 5rem; } }
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem; } }
     @media only screen and (max-width: 660px) {
       .cards__items {
-        grid-template-columns: repeat(1, auto);
-        gap: 3rem; } }
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem; } }
   .cards__item {
-    width: 29rem;
     height: 26rem;
     border: 0.1rem solid #B4F299;
     border-radius: 2rem;
@@ -614,6 +629,10 @@ h3 {
     padding-left: 5rem;
     -webkit-transition: 0.2s linear;
     transition: 0.2s linear; }
+    @media only screen and (max-width: 768px) {
+      .cards__item {
+        height: 21rem;
+        padding-left: 3rem; } }
     .cards__item:hover {
       -webkit-box-shadow: 0px 1.5rem 3rem 0.5rem rgba(180, 242, 153, 0.2);
               box-shadow: 0px 1.5rem 3rem 0.5rem rgba(180, 242, 153, 0.2);
@@ -621,8 +640,8 @@ h3 {
               transform: translateY(-3rem); }
       @media only screen and (max-width: 660px) {
         .cards__item:hover {
-          -webkit-transform: translateY(-1.5rem);
-                  transform: translateY(-1.5rem); } }
+          -webkit-transform: translateY(-1rem);
+                  transform: translateY(-1rem); } }
       .cards__item:hover .cards__img {
         background: rgba(233, 154, 61, 0.7); }
   .cards__top {

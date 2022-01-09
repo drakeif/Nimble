@@ -1,5 +1,18 @@
 @import './modules/vars';
 @import './modules/fonts';
+//SCROLLBAR
+*::-webkit-scrollbar {
+    width: 7px;
+}
+*::-webkit-scrollbar-track {
+    background: $wh; 
+}
+*::-webkit-scrollbar-thumb {
+    background: $accentCol;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: $orange; 
+}
 html {
     font-size: 10px;
     box-sizing: border-box;
@@ -10,6 +23,7 @@ html {
     padding: 0;
     margin: 0;
 }
+// CORRECT STYLES
 body {
     background-color: $mainCol;
     color: $wh;
