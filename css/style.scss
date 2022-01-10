@@ -30,6 +30,9 @@ body {
     font-size: 1.6rem;
     font-family: 'Montserrat';
     font-weight: 400;
+    &.active {
+        overflow: hidden;
+    }
 }
 img {
     display: inline-block;
@@ -56,11 +59,25 @@ h1 {
         font-size: 2.8rem
     }
 }
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    @include media(660) {
+        font-size: 2.6rem;
+    }
+}
 h3 {
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 700;
 }
+p {
+    color: $gray;
+    @include media(768) {
+        font-size: 1.4rem;
+    }
+}
 @import './modules/header';
 @import './modules/intro';
 @import './modules/cards';
+@import './modules/tokens';

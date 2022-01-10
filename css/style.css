@@ -70,6 +70,8 @@ body {
   font-size: 1.6rem;
   font-family: 'Montserrat';
   font-weight: 400; }
+  body.active {
+    overflow: hidden; }
 
 img {
   display: inline-block;
@@ -96,10 +98,23 @@ h1 {
     h1 {
       font-size: 2.8rem; } }
 
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700; }
+  @media only screen and (max-width: 660px) {
+    h2 {
+      font-size: 2.6rem; } }
+
 h3 {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 700; }
+
+p {
+  color: #8FA2A6; }
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 1.4rem; } }
 
 .header {
   padding: 5rem 0 0 0;
@@ -259,8 +274,8 @@ h3 {
         row-gap: .5rem;
         border-top: 0.1rem solid #B4F299;
         border-bottom: 0.1rem solid #B4F299;
-        -webkit-backdrop-filter: blur(0.5rem);
-                backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.3rem);
+                backdrop-filter: blur(0.3rem);
         -webkit-animation: menu-left .5s ease-out;
                 animation: menu-left .5s ease-out; }
       @-webkit-keyframes menu-left {
@@ -390,7 +405,26 @@ h3 {
       width: 100%;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
-
+  .header.active {
+    position: fixed;
+    background-color: #05030E;
+    padding: 1rem;
+    -webkit-animation: menu-down .5s ease-out;
+            animation: menu-down .5s ease-out; }
+@-webkit-keyframes menu-down {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes menu-down {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 .intro {
   position: relative;
   background-image: url("../images/hand.jpg");
@@ -664,5 +698,246 @@ h3 {
 
 .mySwiper {
   width: 100%; }
+
+.tokens {
+  padding: 10rem 0; }
+  @media only screen and (max-width: 768px) {
+    .tokens {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 660px) {
+    .tokens {
+      padding: 3rem 0; } }
+  .tokens__inner {
+    position: relative; }
+  .tokens__about {
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    margin-bottom: 10rem; }
+    @media only screen and (max-width: 768px) {
+      .tokens__about {
+        margin-bottom: 5rem; } }
+    @media only screen and (max-width: 660px) {
+      .tokens__about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 5rem; } }
+    .tokens__about_picture {
+      width: 30.6rem;
+      height: 21.9rem;
+      background: url("../images/token_1.png") no-repeat center/contain;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .tokens__about_logo {
+      display: block;
+      -webkit-animation: token-logo 5s linear infinite;
+              animation: token-logo 5s linear infinite; }
+@-webkit-keyframes token-logo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes token-logo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+    .tokens__about_description {
+      max-width: 78rem; }
+      @media only screen and (max-width: 1140px) {
+        .tokens__about_description {
+          max-width: 68rem; } }
+      @media only screen and (max-width: 1000px) {
+        .tokens__about_description {
+          max-width: 58rem; } }
+      @media only screen and (max-width: 900px) {
+        .tokens__about_description {
+          max-width: 48rem; } }
+      @media only screen and (max-width: 768px) {
+        .tokens__about_description {
+          max-width: 38rem; } }
+      @media only screen and (max-width: 660px) {
+        .tokens__about_description {
+          max-width: 100%; } }
+      .tokens__about_description h2 {
+        margin-bottom: 5rem; }
+        @media only screen and (max-width: 768px) {
+          .tokens__about_description h2 {
+            margin-bottom: 3rem; } }
+      .tokens__about_description p + p {
+        margin-top: 3rem; }
+        @media only screen and (max-width: 768px) {
+          .tokens__about_description p + p {
+            margin-top: 1.5rem; } }
+  .tokens__use {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15rem; }
+    @media only screen and (max-width: 768px) {
+      .tokens__use {
+        margin-bottom: 10rem; } }
+    @media only screen and (max-width: 660px) {
+      .tokens__use {
+        margin-bottom: 5rem; } }
+    .tokens__use_list {
+      position: relative;
+      padding: 11rem 0 0 13rem; }
+      @media only screen and (max-width: 768px) {
+        .tokens__use_list {
+          padding: 2rem 0 0 5rem; } }
+      @media only screen and (max-width: 660px) {
+        .tokens__use_list {
+          padding: 0; } }
+      .tokens__use_list::after {
+        display: block;
+        content: '';
+        width: 44.9rem;
+        height: 55.5rem;
+        background: url("../icons/frame.svg");
+        position: absolute;
+        top: 0;
+        left: 0; }
+        @media only screen and (max-width: 660px) {
+          .tokens__use_list::after {
+            display: none; } }
+      .tokens__use_list h2 {
+        color: #E99A3D;
+        margin-bottom: 5rem; }
+        @media only screen and (max-width: 768px) {
+          .tokens__use_list h2 {
+            margin-bottom: 3rem; } }
+      .tokens__use_list ul {
+        list-style: none; }
+        .tokens__use_list ul li {
+          padding-left: 5rem;
+          font-weight: 700;
+          background: url("../icons/line.svg") no-repeat left; }
+          @media only screen and (max-width: 768px) {
+            .tokens__use_list ul li {
+              font-size: 1.4rem; } }
+          @media only screen and (max-width: 660px) {
+            .tokens__use_list ul li {
+              padding-left: 3rem; } }
+        .tokens__use_list ul li + li {
+          margin-top: 3rem; }
+          @media only screen and (max-width: 768px) {
+            .tokens__use_list ul li + li {
+              margin-top: 1.5rem; } }
+  .tokens__rate {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 0 13rem; }
+    @media only screen and (max-width: 768px) {
+      .tokens__rate {
+        padding: 0 0 0 5rem; } }
+    @media only screen and (max-width: 660px) {
+      .tokens__rate {
+        padding: 0; } }
+    .tokens__rate h2 {
+      font-size: 3.4rem;
+      color: #B4F299;
+      margin-bottom: 5rem; }
+      @media only screen and (max-width: 660px) {
+        .tokens__rate h2 {
+          font-size: 2.6rem;
+          margin-bottom: 2.5rem; } }
+    .tokens__rate ul {
+      list-style: none; }
+      .tokens__rate ul li {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-left: 2rem; }
+        .tokens__rate ul li:first-child {
+          color: #E99A3D;
+          background: url("../../icons/circle_orange.svg") no-repeat center left; }
+        .tokens__rate ul li:last-child {
+          color: #B4F299;
+          background: url("../../icons/circle_green.svg") no-repeat center left; }
+      .tokens__rate ul li + li {
+        margin-top: 2rem; }
+        @media only screen and (max-width: 660px) {
+          .tokens__rate ul li + li {
+            margin-top: 1rem; } }
+    .tokens__rate_comparison {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      gap: 3rem;
+      margin-bottom: 7rem; }
+      @media only screen and (max-width: 768px) {
+        .tokens__rate_comparison {
+          margin-bottom: 5rem; } }
+      @media only screen and (max-width: 660px) {
+        .tokens__rate_comparison {
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          margin-bottom: 3rem; } }
+      .tokens__rate_comparison figure {
+        text-align: center; }
+        .tokens__rate_comparison figure img {
+          margin-bottom: 2rem;
+          -webkit-filter: drop-shadow(0 5rem 3rem rgba(180, 242, 153, 0.3));
+                  filter: drop-shadow(0 5rem 3rem rgba(180, 242, 153, 0.3)); }
+        .tokens__rate_comparison figure figcaption {
+          font-size: 1.4rem;
+          letter-spacing: .3rem; }
+    .tokens__rate_description p + p {
+      margin-top: 3rem; }
+      @media only screen and (max-width: 660px) {
+        .tokens__rate_description p + p {
+          margin-top: 1.5rem; } }
+  .tokens__decor {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+    z-index: 0; }
+    @media only screen and (max-width: 660px) {
+      .tokens__decor {
+        top: 40%;
+        -webkit-transform: translateY(-40%);
+                transform: translateY(-40%); } }
+    .tokens__decor img {
+      border-radius: 50%;
+      opacity: .7;
+      -webkit-filter: blur(0.2rem);
+              filter: blur(0.2rem); }
 
 /*# sourceMappingURL=style.css.map */

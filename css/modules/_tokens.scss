@@ -1,0 +1,233 @@
+.tokens {
+    padding: 10rem 0;
+    @include media(768) {
+        padding: 5rem 0;
+    }
+    @include media(660) {
+        padding: 3rem 0;
+    }
+    &__inner {
+        position: relative;
+    }
+    &__about {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 1rem;
+        margin-bottom: 10rem;
+        @include media(768) {
+            margin-bottom: 5rem;
+        }
+        @include media(660) {
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 5rem;
+        }
+        &_picture {
+            width: 30.6rem;
+            height: 21.9rem;
+            background: url('../images/token_1.png') no-repeat center / contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &_logo {
+            display: block;
+            animation: token-logo 5s linear infinite;
+            @keyframes token-logo {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg); 
+                }
+            }
+        }
+        &_description {
+            max-width: 78rem;
+            @include media(1140) {
+                max-width: 68rem;
+            }
+            @include media(1000) {
+                max-width: 58rem;
+            }
+            @include media(900) {
+                max-width: 48rem;
+            }
+            @include media(768) {
+                max-width: 38rem;
+            }
+            @include media(660) {
+                max-width: 100%;
+            }
+            h2 {
+                margin-bottom: 5rem;
+                @include media(768) {
+                    margin-bottom: 3rem;
+                }
+            }
+            p + p {
+                margin-top: 3rem;
+                @include media(768) {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+    &__use {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 15rem;
+        @include media(768) {
+            margin-bottom: 10rem;
+        }
+        @include media(660) {
+            margin-bottom: 5rem;
+        }
+        &_list {
+            position: relative;
+            padding: 11rem 0 0 13rem;
+            @include media(768) {
+                padding: 2rem 0 0 5rem;
+            }
+            @include media(660) {
+                padding: 0;
+            }
+            &::after {
+                display: block;
+                content: '';
+                width: 44.9rem;
+                height: 55.5rem;
+                background: url('../icons/frame.svg');
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include media(660) {
+                    display: none;
+                }
+            }
+            h2 {
+                color: $orange;
+                margin-bottom: 5rem;
+                @include media(768) {
+                    margin-bottom: 3rem;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    padding-left: 5rem;
+                    font-weight: 700;
+                    background: url('../icons/line.svg') no-repeat left;
+                    @include media(768) {
+                        font-size: 1.4rem;
+                    }
+                    @include media(660) {
+                        padding-left: 3rem;
+                    }
+                }
+                li + li {
+                    margin-top: 3rem;
+                    @include media(768) {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    &__rate {
+        position: relative;
+        z-index: 1;
+        padding: 0 0 0 13rem;
+            @include media(768) {
+                padding: 0 0 0 5rem;
+            }
+            @include media(660) {
+                padding: 0;
+            }
+        h2 {
+            font-size: 3.4rem;
+            color: $accentCol;
+            margin-bottom: 5rem;
+            @include media(660) {
+                font-size: 2.6rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding-left: 2rem;
+                &:first-child {
+                    color: $orange;
+                    background: url('../../icons/circle_orange.svg') no-repeat center left;
+                }
+                &:last-child {
+                    color: $accentCol;
+                    background: url('../../icons/circle_green.svg') no-repeat center left;
+                }
+            }
+            li + li {
+                margin-top: 2rem;
+                @include media(660) {
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &_comparison {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 3rem;
+            margin-bottom: 7rem;
+            @include media(768) {
+                margin-bottom: 5rem;
+            }
+            @include media(660) {
+                justify-content: center;
+                margin-bottom: 3rem;
+            }
+            figure {
+                text-align: center;
+                img {
+                    margin-bottom: 2rem;
+                    filter: drop-shadow(0 5rem 3rem rgba($accentCol, .3));
+                }
+                figcaption {
+                    font-size: 1.4rem;
+                    letter-spacing: .3rem;
+                }
+            }
+        }
+        &_description {
+            p + p {
+                margin-top: 3rem;
+                @include media(660) {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+    &__decor {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 0;
+        @include media(660) {
+            top: 40%;
+            transform: translateY(-40%); 
+        }
+        img {
+            border-radius: 50%;
+            opacity: .7;
+            filter: blur(.2rem);
+        }
+    }
+}
