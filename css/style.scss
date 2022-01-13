@@ -71,6 +71,10 @@ h3 {
     text-transform: uppercase;
     font-weight: 700;
 }
+h4 {
+    font-size: 1.6rem;
+    color: $accentCol;
+}
 p {
     color: $gray;
     @include media(768) {
@@ -81,3 +85,4 @@ p {
 @import './modules/intro';
 @import './modules/cards';
 @import './modules/tokens';
+@import './modules/features';

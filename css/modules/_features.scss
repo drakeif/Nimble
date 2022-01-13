@@ -1,0 +1,98 @@
+.features {
+    padding: 10rem 0;
+    @include media(768) {
+        padding: 5rem 0;
+    }
+    @include media(660) {
+        padding: 3rem 0;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2rem;
+        @include media(768) {
+            flex-direction: column;
+            row-gap: 5rem;
+        }
+        @include media(768) {
+            flex-direction: column;
+            row-gap: 3rem;
+        }
+    }
+    &__picture {
+        width: 61rem;
+        height: 58rem;
+        border: .1rem solid $accentCol;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        @include media(950) {
+            border: none;
+            width: auto;
+            height: auto;
+        }
+        h4 {
+            margin-bottom: 0.5rem;
+        }
+        span {
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: $accentCol;
+            letter-spacing: .5rem;
+        }
+    }
+    &__tokens {
+        h2 {
+            margin-bottom: 5rem;
+        }
+    }
+    &__title {
+        &.primary {
+            display: block;
+            @include media(768) {
+                display: none;
+            }
+        }
+        &.second {
+            display: none;
+            @include media(768) {
+                display: block;
+            }
+        }
+    }
+    &__list {
+        width: 40rem;
+        @include media(950) {
+            width: 35rem;
+        }
+        @include media(500) {
+            width: 30rem;
+        }
+    }
+    &__ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+            @include media(500) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__ul + &__ul {
+        margin-top: 4rem;
+        @include media(500) {
+            margin-top: 3rem;
+        }
+    }
+    &__liLeft {
+        padding-left: 6rem;
+        background: url('../icons/list-line.svg') no-repeat left center;
+        @include media(500) {
+            padding-left: 5rem;
+        }
+    }
+}
