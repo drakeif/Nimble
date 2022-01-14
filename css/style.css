@@ -1051,4 +1051,143 @@ p {
       .features__liLeft {
         padding-left: 5rem; } }
 
+.footer {
+  position: relative;
+  padding: 10rem 0 20rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    .footer {
+      padding: 5rem 0 10rem; } }
+  @media only screen and (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 5rem; } }
+  .footer__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 10rem; }
+    @media only screen and (max-width: 768px) {
+      .footer__inner {
+        row-gap: 7rem; } }
+    @media only screen and (max-width: 660px) {
+      .footer__inner {
+        row-gap: 5rem; } }
+  .footer__title {
+    max-width: 76rem;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .footer__title {
+        max-width: 40rem; } }
+    @media only screen and (max-width: 500px) {
+      .footer__title {
+        max-width: 32rem; } }
+    .footer__title h2 {
+      margin-bottom: 5rem; }
+      @media only screen and (max-width: 768px) {
+        .footer__title h2 {
+          font-size: 1.8rem;
+          margin-bottom: 3rem; } }
+    .footer__title button {
+      padding: 1rem 3rem;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      border: 0.1rem solid #B4F299;
+      border-radius: .8rem;
+      color: #ffffff;
+      font-family: 'Montserrat';
+      font-size: 1.4rem;
+      font-weight: 600;
+      width: 20rem;
+      background: #4579F5;
+      border: 0.1rem solid #4579F5;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .footer__title button:hover {
+        background: transparent; }
+  .footer__mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem; }
+    @media only screen and (max-width: 768px) {
+      .footer__mail {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 1.5rem; } }
+    .footer__mail p {
+      font-size: 3rem;
+      color: #B4F299; }
+      @media only screen and (max-width: 768px) {
+        .footer__mail p {
+          font-size: 1.8rem; } }
+    .footer__mail a {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #B4F299;
+      text-decoration: underline; }
+      @media only screen and (max-width: 768px) {
+        .footer__mail a {
+          font-size: 1.8rem; } }
+      .footer__mail a:hover {
+        text-decoration: none; }
+  .footer__social {
+    width: 70rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    @media only screen and (max-width: 768px) {
+      .footer__social {
+        width: 100%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 1rem; } }
+    .footer__social a:hover img {
+      opacity: .9;
+      border: 0.1rem solid #B4F299; }
+    .footer__social img {
+      border: .1rem solid transparent;
+      border-radius: 2rem;
+      -webkit-filter: drop-shadow(0.5rem 0.5rem 2rem rgba(180, 242, 153, 0.5));
+              filter: drop-shadow(0.5rem 0.5rem 2rem rgba(180, 242, 153, 0.5));
+      opacity: .5;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+  .footer__elipse {
+    position: absolute;
+    bottom: -5%;
+    left: 10%;
+    z-index: 0; }
+    @media only screen and (max-width: 660px) {
+      .footer__elipse {
+        left: 33%;
+        bottom: 10%;
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg); } }
+
 /*# sourceMappingURL=style.css.map */
