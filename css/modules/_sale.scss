@@ -1,0 +1,183 @@
+.sale {
+    padding: 10rem 0;
+    @include media(768) {
+        padding: 5rem 0;
+    }
+    @include media(570) {
+        padding: 3rem 0;
+    }
+    &__round {
+        display: grid;
+        grid-template-columns: repeat(7, 17rem);
+        justify-content: space-between;
+        row-gap: 3rem;
+        @include media(1230) {
+            grid-template-columns: repeat(5, 17rem);
+        }
+        @include media(900) {
+            grid-template-columns: repeat(4, 17rem);
+        }
+        @include media(768) {
+            grid-template-columns: repeat(3, 17rem);
+            row-gap: 2rem;
+        }
+        @include media(570) {
+            grid-template-columns: repeat(2, 15rem);
+            justify-content: center;
+            gap: 1rem;
+        }
+        &_item {
+            position: relative;
+            width: 17rem;
+            height: 21rem;
+            border: .1rem solid rgba($accentCol, .3);
+            border-radius: 2rem;
+            transition: $tr;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 0;
+            box-shadow: 0rem .5rem 2rem rgba($accentCol, .3);
+            @include media(570) {
+                padding: 2rem 0;
+                width: 15rem;
+                height: 17rem;
+            }
+            &::after {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 0.1rem;
+                background: rgba($accentCol, .5);
+                position: absolute;
+                left: 0;
+                top: 8rem;
+                @include media(570) {
+                    top: 6rem;
+                }
+            }
+            &:hover {
+                border: .1rem solid rgba($accentCol, 1);
+                transform: translateY(-1rem);
+                box-shadow: 0rem 1rem 3rem rgba($accentCol, .5);
+                @include media(570) {
+                    transform: translateY(-.5rem);
+                }
+            }
+        }
+        &_title {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $wh;
+            text-transform: uppercase;
+        }
+        &_content {
+            text-align: center;
+        }
+        &_price {
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: $accentCol;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0rem 1.5rem 1.5rem rgba($accentCol, 1));
+        }
+        &_number {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: rgba($accentCol, .5);
+            filter: drop-shadow(0rem 1.5rem 1.5rem rgba($accentCol, 1));
+        }
+        &_participation {
+            width: 100%;
+            height: 100%;
+            grid-column: 6/8;
+            grid-row: 1/3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include media(1230) {
+                grid-column: 3/6;
+            }
+            @include media(900) {
+                grid-column: 2/5;
+            }
+            @include media(768) {
+                grid-column: 2/4;
+            }
+            @include media(570) {
+                grid-column: 1/3;
+                grid-row: 6/7;
+                height: 37rem;
+            }
+        }
+        &_description {
+            position: relative;
+            padding: 4rem 6rem 0 3rem;
+            width: 100%;
+            height: 80%;
+            border: .1rem solid $accentCol;
+            border-radius: 2rem;
+            box-shadow: 0rem .5rem 2rem rgba($accentCol, .3);
+            @include media(570) {
+                padding: 3rem 4rem 0 3rem;
+                height: 75%;
+            }
+            &::after {
+                display: block;
+                width: 12rem;
+                height: 12rem;
+                content: '';
+                background: url('../images/token_2.png');
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                right: 0%;
+            }
+            h4 {
+                text-transform: uppercase;
+                margin-bottom: 3rem;
+                @include media(570) {
+                    margin-bottom: 2rem;
+                }
+            }
+            ul + ul {
+                margin-top: 2rem;
+                @include media(570) {
+                    margin-top: 1rem;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    &:first-child {
+                        font-size: 1.2rem;
+                        color: $accentCol;
+                        margin-bottom: 1rem;
+                        @include media(570) {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                    &:last-child {
+                        font-size: 1.4rem
+                    }
+                }
+            }
+        }
+        &_button {
+            @include button;
+            padding: 2rem 3rem;
+            width: 100%;
+            background: $accentCol;
+            font-size: 1.8rem;
+            color: $mainCol;
+            transition: $tr;
+            box-shadow: 0rem 1rem 3rem rgba($accentCol, .5);
+            &:hover {
+                background: $orange;
+                border: .1rem solid $orange;
+                box-shadow: 0rem 1rem 3rem rgba($orange, .5);
+            }
+        }
+    }
+}
