@@ -1,2 +1,2 @@
 # Nimble
-Demo: https://drakeif.github.io/Nimble/
+<a href="https://drakeif.github.io/Nimble/" target_blank>Demo</a>
