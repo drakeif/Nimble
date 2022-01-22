@@ -1271,6 +1271,7 @@ p {
         -webkit-box-shadow: 0rem 1rem 3rem rgba(233, 154, 61, 0.5);
                 box-shadow: 0rem 1rem 3rem rgba(233, 154, 61, 0.5); }
   .sale__program {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1281,19 +1282,22 @@ p {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    row-gap: 10rem; }
+    row-gap: 10rem;
+    margin-bottom: 20rem; }
     @media only screen and (max-width: 768px) {
       .sale__program {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        row-gap: 5rem; } }
+        row-gap: 5rem;
+        margin-bottom: 10rem; } }
     @media only screen and (max-width: 500px) {
       .sale__program {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        row-gap: 2.5rem; } }
+        row-gap: 2.5rem;
+        margin-bottom: 5rem; } }
     .sale__program_img {
       display: block;
       position: absolute;
@@ -1493,6 +1497,126 @@ p {
         left: -60%;
         width: 40rem;
         height: 40rem; } }
+  .sale__kibotron {
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    @media only screen and (max-width: 768px) {
+      .sale__kibotron {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    .sale__kibotron h2 {
+      position: relative;
+      font-size: 4.8rem;
+      font-weight: 700;
+      background: url("../../images/kibotron.png") no-repeat;
+      background-size: contain;
+      padding-left: 8rem;
+      margin-bottom: 6rem;
+      margin-right: 39rem; }
+      @media only screen and (max-width: 768px) {
+        .sale__kibotron h2 {
+          font-size: 3.8rem;
+          margin-bottom: 4rem;
+          margin-right: 0; } }
+    .sale__kibotron_cards {
+      display: grid;
+      grid-template-columns: repeat(2, 32rem);
+      gap: 5rem; }
+      @media only screen and (max-width: 768px) {
+        .sale__kibotron_cards {
+          grid-template-columns: repeat(2, 30rem);
+          gap: 3rem; } }
+      @media only screen and (max-width: 700px) {
+        .sale__kibotron_cards {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2rem; } }
+    .sale__kibotron_card {
+      width: 32rem;
+      height: 26rem;
+      background: transparent;
+      border: 0.1rem solid #B4F299;
+      border-radius: 2rem;
+      display: grid;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding-top: 6rem;
+      -webkit-transition: 0.2s linear;
+      transition: 0.2s linear; }
+      .sale__kibotron_card:hover {
+        background-color: rgba(180, 242, 153, 0.1); }
+      @media only screen and (max-width: 768px) {
+        .sale__kibotron_card {
+          width: 30rem;
+          height: 24rem;
+          padding-top: 4rem; } }
+      @media only screen and (max-width: 700px) {
+        .sale__kibotron_card {
+          width: 100%;
+          height: 16rem;
+          padding-top: 4rem;
+          display: block;
+          padding: 3rem 2rem 0rem 8rem; } }
+    .sale__kibotron_content {
+      width: 17rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      row-gap: 2rem; }
+      @media only screen and (max-width: 700px) {
+        .sale__kibotron_content {
+          width: 100%; } }
+    .sale__kibotron_title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #4579F5;
+      position: relative; }
+      .sale__kibotron_title::before {
+        display: block;
+        content: '';
+        background: url("../../images/kibotron-circle.png");
+        width: 2.8rem;
+        height: 2.8rem;
+        position: absolute;
+        top: 0;
+        left: -4rem; }
+    .sale__kibotron_description {
+      font-size: 1.4rem; }
+  .sale__decor {
+    width: 100rem;
+    position: absolute;
+    left: 0;
+    top: 65%;
+    z-index: 0; }
+    @media only screen and (max-width: 1200px) {
+      .sale__decor {
+        left: -25%;
+        top: 75%;
+        width: 80rem; } }
+    @media only screen and (max-width: 1000px) {
+      .sale__decor {
+        left: -35%;
+        top: 65%;
+        width: 70rem; } }
+    @media only screen and (max-width: 768px) {
+      .sale__decor {
+        display: none; } }
 
 .footer {
   position: relative;

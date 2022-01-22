@@ -190,17 +190,21 @@
         }
     }
     &__program {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         row-gap: 10rem;
+        margin-bottom: 20rem;
         @include media(768) {
             align-items: center;
             row-gap: 5rem;
+            margin-bottom: 10rem;
         }
         @include media(500) {
             align-items: center;
             row-gap: 2.5rem;
+            margin-bottom: 5rem;
         }
         &_img {
             display: block;
@@ -420,6 +424,119 @@
             left: -60%;
             width: 40rem;
             height: 40rem;
+        }
+    }
+    &__kibotron {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include media(768) {
+            align-items: center;
+        }
+        h2 {
+            position: relative;
+            font-size: 4.8rem;
+            font-weight: 700;
+            background: url('../../images/kibotron.png') no-repeat;
+            background-size: contain;
+            padding-left: 8rem;
+            margin-bottom: 6rem;
+            margin-right: 39rem;
+            @include media(768) {
+                font-size: 3.8rem;
+                margin-bottom: 4rem;
+                margin-right: 0;
+            }
+        }
+        &_cards {
+            display: grid;
+            grid-template-columns: repeat(2, 32rem);
+            gap: 5rem;
+            @include media(768) {
+                grid-template-columns: repeat(2, 30rem);
+                gap: 3rem;
+            }
+            @include media(700) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem;
+            }
+        }
+        &_card {
+            width: 32rem;
+            height: 26rem;
+            background: transparent;
+            border: .1rem solid $accentCol;
+            border-radius: 2rem;
+            display: grid;
+            justify-content: center;
+            padding-top: 6rem;
+            transition: $tr;
+            &:hover {
+                background-color: $accentDecor;
+            }
+            @include media(768) {
+                width: 30rem;
+                height: 24rem;
+                padding-top: 4rem;
+            }
+            @include media(700) {
+                width: 100%;
+                height: 16rem;
+                padding-top: 4rem;
+                display: block;
+                padding: 3rem 2rem 0rem 8rem;
+            }
+        }
+        &_content {
+            width: 17rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            @include media(700) {
+                width: 100%;
+            }
+        }
+        &_title {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $blue;
+            position: relative;
+            &::before {
+                display: block;
+                content: '';
+                background: url('../../images/kibotron-circle.png');
+                width: 2.8rem;
+                height: 2.8rem;
+                position: absolute;
+                top: 0;
+                left: -4rem;
+            }
+        }
+        &_description {
+            font-size: 1.4rem;
+        }
+    }
+    &__decor {
+        width: 100rem;
+        position: absolute;
+        left: 0;
+        top: 65%;
+        z-index: 0;
+        @include media(1200) {
+            left: -25%;
+            top: 75%;
+            width: 80rem;
+        }
+        @include media(1000) {
+            left: -35%;
+            top: 65%;
+            width: 70rem;
+        }
+        @include media(768) {
+            display: none;
         }
     }
 }
