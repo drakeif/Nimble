@@ -1,16 +1,18 @@
 .sale {
+    position: relative;
     padding: 10rem 0;
     @include media(768) {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
-    @include media(570) {
-        padding: 3rem 0;
+    @include media(500) {
+        padding: 2rem 0;
     }
     &__round {
         display: grid;
         grid-template-columns: repeat(7, 17rem);
         justify-content: space-between;
         row-gap: 3rem;
+        margin-bottom: 20rem;
         @include media(1230) {
             grid-template-columns: repeat(5, 17rem);
         }
@@ -20,11 +22,13 @@
         @include media(768) {
             grid-template-columns: repeat(3, 17rem);
             row-gap: 2rem;
+            margin-bottom: 10rem;
         }
         @include media(570) {
             grid-template-columns: repeat(2, 15rem);
             justify-content: center;
             gap: 1rem;
+            margin-bottom: 5rem;
         }
         &_item {
             position: relative;
@@ -183,6 +187,239 @@
                 border: .1rem solid $orange;
                 box-shadow: 0rem 1rem 3rem rgba($orange, .5);
             }
+        }
+    }
+    &__program {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 10rem;
+        @include media(768) {
+            align-items: center;
+            row-gap: 5rem;
+        }
+        @include media(500) {
+            align-items: center;
+            row-gap: 2.5rem;
+        }
+        &_img {
+            display: block;
+            position: absolute;
+            left: -15rem;
+            @include media(1300) {
+                left: -40rem;
+            }
+            @include media(1000) {
+                left: -60rem;
+            }
+            @include media(768) {
+                position: relative;
+                left: -20%;
+                width: 50rem;
+            }
+            @include media(500) {
+                position: relative;
+                left: -20%;
+                width: 32rem;
+            }
+        }
+        &_partner {
+            position: relative;
+            h2 {
+                margin-bottom: 5rem;
+                @include media(768) {
+                    margin-bottom: 3rem;
+                }
+                @include media(500) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        &_item {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+            @include media(500) {
+                margin-bottom: 2rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &_step {
+            width: 50rem;
+            @include media(600) {
+                width: 40rem;
+            }
+            @include media(500) {
+                width: 27rem;
+            }
+            @include media(400) {
+                width: 24rem;
+            }
+        }
+        &_level {
+            width: 50rem;
+            margin-bottom: 1rem;
+            @include media(600) {
+                width: 40rem;
+                font-size: 1.4rem;
+            }
+            @include media(500) {
+                width: 27rem;
+            }
+            @include media(400) {
+                width: 24rem;
+            }
+            span + span {
+                margin-left: 2rem;
+                @include media(600) {
+                    margin-left: 1rem;
+                }
+            }
+            span {
+                &.mod--line {
+                    display: inline-block;
+                    width: 3rem;
+                    height: 0.1rem;
+                    vertical-align: middle;
+                    @include media(500) {
+                        display: none;
+                    }
+                    &.line-01 {
+                        background: #8AF9AD;
+                    }
+                    &.line-02, &.line-03 {
+                        background: #CAEE39;
+                    }
+                    &.line-04, &.line-05 {
+                        background: #e9ad3d;
+                    }
+                    &.line-06, &.line-07 {
+                        background: #E9713D;
+                    }
+                }
+            }
+            span {
+                &:last-child {
+                    color: #8AF9AD;
+                    @include media(500) {
+                        font-size: 1.2rem;
+                    }
+                    &.mod--22, &.mod--23 {
+                        color: #CAEE39;
+                    }
+                    &.mod--24, &.mod--25 {
+                        color: #e9ad3d;
+                    }
+                    &.mod--26, &.mod--27 {
+                        color: #EE6439;
+                    }
+                }
+            }
+        }
+        &_bar {
+            width: 45rem;
+            height: .8rem;
+            background: $bar;
+            border-radius: .25rem;
+            @include media(600) {
+                width: 35rem;
+            }
+            @include media(500) {
+                width: 25rem;
+            }
+            @include media(400) {
+                width: 22rem;
+            }
+        }
+        &_line {
+            width: 100%;
+            height: 0.8rem;
+            background: linear-gradient(to right, #E2F685, #8AF9AD);
+            border-radius: .25rem;
+            box-shadow: 0 1rem 2rem rgba(#8AF9AD, .5);
+            &.mod--02, &.mod--03 {
+                width: 60%;
+                background: linear-gradient(to right, #CAEE39, #E99A3D);
+                box-shadow: 0 1rem 2rem rgba(#E99A3D, .5);
+            }
+            &.mod--04, &.mod--05 {
+                width: 40%;
+                background: linear-gradient(to right, #EED139, #E9713D);
+                box-shadow: 0 1rem 2rem rgba(#e9ad3d, .5);
+            }
+            &.mod--06, &.mod--07 {
+                width: 20%;
+                background: linear-gradient(to right, #EE6439, #E9713D);
+                box-shadow: 0 1rem 2rem rgba(#E9713D, .5);
+            }
+        }
+        &_percent {
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: .7;
+            color: #8AF9AD;
+            &.mod--12, &.mod--13 {
+                color: #E99A3D;
+            }
+            &.mod--14, &.mod--15 {
+                color: #EED139;
+            }
+            &.mod--16, &.mod--17 {
+                color: #EE6439;
+            }
+        }
+        &_info {
+            max-width: 72rem;
+            position: relative;
+            @include media(900) {
+                max-width: 52rem;
+            }
+            @include media(768) {
+                max-width: 100%;
+                text-align: center;
+            }
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -7rem;
+                background: url('../images/info.png');
+                background-size: cover;
+                width: 3.5rem;
+                height: 3.5rem;
+                @include media(768) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &::before {
+        content: '';
+        display: block;
+        background: $accentDecor;
+        width: 60rem;
+        height: 60rem;
+        border-radius: 50%;
+        filter: blur(5rem);
+        position: absolute;
+        top: 5%;
+        left: -20%;
+        @include media(1000) {
+            top: 0;
+            left: -30%;
+        }
+        @include media(768) {
+            left: -40%;
+            width: 50rem;
+            height: 50rem;
+        }
+        @include media(500) {
+            left: -60%;
+            width: 40rem;
+            height: 40rem;
         }
     }
 }

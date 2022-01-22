@@ -115,7 +115,8 @@ h4 {
   color: #B4F299; }
 
 p {
-  color: #8FA2A6; }
+  color: #8FA2A6;
+  line-height: 1.5; }
   @media only screen and (max-width: 768px) {
     p {
       font-size: 1.4rem; } }
@@ -1052,20 +1053,22 @@ p {
         padding-left: 5rem; } }
 
 .sale {
+  position: relative;
   padding: 10rem 0; }
   @media only screen and (max-width: 768px) {
     .sale {
-      padding: 5rem 0; } }
-  @media only screen and (max-width: 570px) {
+      padding: 4rem 0; } }
+  @media only screen and (max-width: 500px) {
     .sale {
-      padding: 3rem 0; } }
+      padding: 2rem 0; } }
   .sale__round {
     display: grid;
     grid-template-columns: repeat(7, 17rem);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    row-gap: 3rem; }
+    row-gap: 3rem;
+    margin-bottom: 20rem; }
     @media only screen and (max-width: 1230px) {
       .sale__round {
         grid-template-columns: repeat(5, 17rem); } }
@@ -1075,14 +1078,16 @@ p {
     @media only screen and (max-width: 768px) {
       .sale__round {
         grid-template-columns: repeat(3, 17rem);
-        row-gap: 2rem; } }
+        row-gap: 2rem;
+        margin-bottom: 10rem; } }
     @media only screen and (max-width: 570px) {
       .sale__round {
         grid-template-columns: repeat(2, 15rem);
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        gap: 1rem; } }
+        gap: 1rem;
+        margin-bottom: 5rem; } }
     .sale__round_item {
       position: relative;
       width: 17rem;
@@ -1265,6 +1270,229 @@ p {
         border: 0.1rem solid #E99A3D;
         -webkit-box-shadow: 0rem 1rem 3rem rgba(233, 154, 61, 0.5);
                 box-shadow: 0rem 1rem 3rem rgba(233, 154, 61, 0.5); }
+  .sale__program {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    row-gap: 10rem; }
+    @media only screen and (max-width: 768px) {
+      .sale__program {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 5rem; } }
+    @media only screen and (max-width: 500px) {
+      .sale__program {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 2.5rem; } }
+    .sale__program_img {
+      display: block;
+      position: absolute;
+      left: -15rem; }
+      @media only screen and (max-width: 1300px) {
+        .sale__program_img {
+          left: -40rem; } }
+      @media only screen and (max-width: 1000px) {
+        .sale__program_img {
+          left: -60rem; } }
+      @media only screen and (max-width: 768px) {
+        .sale__program_img {
+          position: relative;
+          left: -20%;
+          width: 50rem; } }
+      @media only screen and (max-width: 500px) {
+        .sale__program_img {
+          position: relative;
+          left: -20%;
+          width: 32rem; } }
+    .sale__program_partner {
+      position: relative; }
+      .sale__program_partner h2 {
+        margin-bottom: 5rem; }
+        @media only screen and (max-width: 768px) {
+          .sale__program_partner h2 {
+            margin-bottom: 3rem; } }
+        @media only screen and (max-width: 500px) {
+          .sale__program_partner h2 {
+            margin-bottom: 2rem; } }
+    .sale__program_item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 500px) {
+        .sale__program_item {
+          margin-bottom: 2rem; } }
+      .sale__program_item:last-child {
+        margin-bottom: 0; }
+    .sale__program_step {
+      width: 50rem; }
+      @media only screen and (max-width: 600px) {
+        .sale__program_step {
+          width: 40rem; } }
+      @media only screen and (max-width: 500px) {
+        .sale__program_step {
+          width: 27rem; } }
+      @media only screen and (max-width: 400px) {
+        .sale__program_step {
+          width: 24rem; } }
+    .sale__program_level {
+      width: 50rem;
+      margin-bottom: 1rem; }
+      @media only screen and (max-width: 600px) {
+        .sale__program_level {
+          width: 40rem;
+          font-size: 1.4rem; } }
+      @media only screen and (max-width: 500px) {
+        .sale__program_level {
+          width: 27rem; } }
+      @media only screen and (max-width: 400px) {
+        .sale__program_level {
+          width: 24rem; } }
+      .sale__program_level span + span {
+        margin-left: 2rem; }
+        @media only screen and (max-width: 600px) {
+          .sale__program_level span + span {
+            margin-left: 1rem; } }
+      .sale__program_level span.mod--line {
+        display: inline-block;
+        width: 3rem;
+        height: 0.1rem;
+        vertical-align: middle; }
+        @media only screen and (max-width: 500px) {
+          .sale__program_level span.mod--line {
+            display: none; } }
+        .sale__program_level span.mod--line.line-01 {
+          background: #8AF9AD; }
+        .sale__program_level span.mod--line.line-02, .sale__program_level span.mod--line.line-03 {
+          background: #CAEE39; }
+        .sale__program_level span.mod--line.line-04, .sale__program_level span.mod--line.line-05 {
+          background: #e9ad3d; }
+        .sale__program_level span.mod--line.line-06, .sale__program_level span.mod--line.line-07 {
+          background: #E9713D; }
+      .sale__program_level span:last-child {
+        color: #8AF9AD; }
+        @media only screen and (max-width: 500px) {
+          .sale__program_level span:last-child {
+            font-size: 1.2rem; } }
+        .sale__program_level span:last-child.mod--22, .sale__program_level span:last-child.mod--23 {
+          color: #CAEE39; }
+        .sale__program_level span:last-child.mod--24, .sale__program_level span:last-child.mod--25 {
+          color: #e9ad3d; }
+        .sale__program_level span:last-child.mod--26, .sale__program_level span:last-child.mod--27 {
+          color: #EE6439; }
+    .sale__program_bar {
+      width: 45rem;
+      height: .8rem;
+      background: #3C3A46;
+      border-radius: .25rem; }
+      @media only screen and (max-width: 600px) {
+        .sale__program_bar {
+          width: 35rem; } }
+      @media only screen and (max-width: 500px) {
+        .sale__program_bar {
+          width: 25rem; } }
+      @media only screen and (max-width: 400px) {
+        .sale__program_bar {
+          width: 22rem; } }
+    .sale__program_line {
+      width: 100%;
+      height: 0.8rem;
+      background: -webkit-gradient(linear, left top, right top, from(#E2F685), to(#8AF9AD));
+      background: linear-gradient(to right, #E2F685, #8AF9AD);
+      border-radius: .25rem;
+      -webkit-box-shadow: 0 1rem 2rem rgba(138, 249, 173, 0.5);
+              box-shadow: 0 1rem 2rem rgba(138, 249, 173, 0.5); }
+      .sale__program_line.mod--02, .sale__program_line.mod--03 {
+        width: 60%;
+        background: -webkit-gradient(linear, left top, right top, from(#CAEE39), to(#E99A3D));
+        background: linear-gradient(to right, #CAEE39, #E99A3D);
+        -webkit-box-shadow: 0 1rem 2rem rgba(233, 154, 61, 0.5);
+                box-shadow: 0 1rem 2rem rgba(233, 154, 61, 0.5); }
+      .sale__program_line.mod--04, .sale__program_line.mod--05 {
+        width: 40%;
+        background: -webkit-gradient(linear, left top, right top, from(#EED139), to(#E9713D));
+        background: linear-gradient(to right, #EED139, #E9713D);
+        -webkit-box-shadow: 0 1rem 2rem rgba(233, 173, 61, 0.5);
+                box-shadow: 0 1rem 2rem rgba(233, 173, 61, 0.5); }
+      .sale__program_line.mod--06, .sale__program_line.mod--07 {
+        width: 20%;
+        background: -webkit-gradient(linear, left top, right top, from(#EE6439), to(#E9713D));
+        background: linear-gradient(to right, #EE6439, #E9713D);
+        -webkit-box-shadow: 0 1rem 2rem rgba(233, 113, 61, 0.5);
+                box-shadow: 0 1rem 2rem rgba(233, 113, 61, 0.5); }
+    .sale__program_percent {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: .7;
+      color: #8AF9AD; }
+      .sale__program_percent.mod--12, .sale__program_percent.mod--13 {
+        color: #E99A3D; }
+      .sale__program_percent.mod--14, .sale__program_percent.mod--15 {
+        color: #EED139; }
+      .sale__program_percent.mod--16, .sale__program_percent.mod--17 {
+        color: #EE6439; }
+    .sale__program_info {
+      max-width: 72rem;
+      position: relative; }
+      @media only screen and (max-width: 900px) {
+        .sale__program_info {
+          max-width: 52rem; } }
+      @media only screen and (max-width: 768px) {
+        .sale__program_info {
+          max-width: 100%;
+          text-align: center; } }
+      .sale__program_info::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -7rem;
+        background: url("../images/info.png");
+        background-size: cover;
+        width: 3.5rem;
+        height: 3.5rem; }
+        @media only screen and (max-width: 768px) {
+          .sale__program_info::before {
+            display: none; } }
+  .sale::before {
+    content: '';
+    display: block;
+    background: rgba(180, 242, 153, 0.1);
+    width: 60rem;
+    height: 60rem;
+    border-radius: 50%;
+    -webkit-filter: blur(5rem);
+            filter: blur(5rem);
+    position: absolute;
+    top: 5%;
+    left: -20%; }
+    @media only screen and (max-width: 1000px) {
+      .sale::before {
+        top: 0;
+        left: -30%; } }
+    @media only screen and (max-width: 768px) {
+      .sale::before {
+        left: -40%;
+        width: 50rem;
+        height: 50rem; } }
+    @media only screen and (max-width: 500px) {
+      .sale::before {
+        left: -60%;
+        width: 40rem;
+        height: 40rem; } }
 
 .footer {
   position: relative;
