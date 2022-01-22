@@ -1519,7 +1519,7 @@ p {
       position: relative;
       font-size: 4.8rem;
       font-weight: 700;
-      background: url("../../images/kibotron.png") no-repeat;
+      background: url("../images/kibotron.png") no-repeat;
       background-size: contain;
       padding-left: 8rem;
       margin-bottom: 6rem;
@@ -1590,7 +1590,7 @@ p {
       .sale__kibotron_title::before {
         display: block;
         content: '';
-        background: url("../../images/kibotron-circle.png");
+        background: url("../images/kibotron-circle.png");
         width: 2.8rem;
         height: 2.8rem;
         position: absolute;
