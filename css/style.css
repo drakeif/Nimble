@@ -1481,7 +1481,7 @@ p {
     -webkit-filter: blur(5rem);
             filter: blur(5rem);
     position: absolute;
-    top: 5%;
+    top: 0;
     left: -20%; }
     @media only screen and (max-width: 1000px) {
       .sale::before {

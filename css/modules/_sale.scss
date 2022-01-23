@@ -409,7 +409,7 @@
         border-radius: 50%;
         filter: blur(5rem);
         position: absolute;
-        top: 5%;
+        top: 0;
         left: -20%;
         @include media(1000) {
             top: 0;
